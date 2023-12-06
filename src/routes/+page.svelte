@@ -1,4 +1,4 @@
-<div class="max-w-3xl mx-[auto] border-2 rounded min-h-screen flex-wrap text-center">
+<div class="max-w-3xl mx-[auto] border-2 rounded min-h-screen flex-wrap text-center p-6">
     <h1 class="text-4xl pb-10">Grably</h1>
     <table class="table-fixed text-left">
         <thead>
