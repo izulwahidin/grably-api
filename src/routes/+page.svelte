@@ -16,7 +16,7 @@
           </tr>
           <tr>
             <td>TV Series v1</td>
-            <td>/tv/v1/[TMDB_ID]/S[]/E[]</td>
+            <td>/tv/v1/[TMDB_ID]/S[NUMBER]/E[NUMBER]</td>
             <td>/tv/v1/1396/S1/E1</td>
           </tr>
         </tbody>
