@@ -1,5 +1,5 @@
 <div class="max-w-3xl mx-[auto] border-2 rounded min-h-screen flex-wrap text-center">
-    <h1 class="text-4xl">Grably</h1>
+    <h1 class="text-4xl pb-10">Grably</h1>
     <table class="table-fixed text-left">
         <thead>
           <tr>
@@ -21,5 +21,5 @@
           </tr>
         </tbody>
       </table>
+      <p class="text-center text-xl pt-10">made with svelte</p>
 </div>
-<p class="text-center">made with svelte</p>
