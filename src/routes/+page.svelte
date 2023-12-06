@@ -22,3 +22,4 @@
         </tbody>
       </table>
 </div>
+<p class="text-center">made with svelte</p>
