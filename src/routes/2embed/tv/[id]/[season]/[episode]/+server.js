@@ -1,14 +1,7 @@
-import { parse2embedMovie } from "$lib/2embed";
+import { parse2embedTV } from "$lib/2embed";
 
 export async function GET({params}){
-    let data
-    switch (params.server) {
-        case 'v1':
-            data = await parse2embedMovie(params.id)
-            break;
-        default:
-            throw(`Server is unidentified ${params.server}`)
-    }
+    const data = await parse2embedTV(params.id, params.season, params.episode)
 
     try {
         const headers = {

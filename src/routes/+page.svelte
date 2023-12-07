@@ -1,25 +1,41 @@
-<div class="max-w-3xl mx-[auto] border-2 rounded min-h-screen flex-wrap text-center p-6">
+<script>
+  import { AccordionItem, Accordion } from 'flowbite-svelte';
+  import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell } from 'flowbite-svelte';
+  import {page} from '$app/stores'
+
+  const origin = $page.url.origin
+</script>
+
+<div class="max-w-3xl mx-[auto] border-2 min-h-screen rounded text-center p-4 bg-slate-800">
     <h1 class="text-4xl pb-10">Grably</h1>
-    <table class="table-fixed text-left">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Query</th>
-            <th>Example</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Movie v1</td>
-            <td>/movie/v1/[TMDB_ID]</td>
-            <td>/movie/v1/tt0439572</td>
-          </tr>
-          <tr>
-            <td>TV Series v1</td>
-            <td>/tv/v1/[TMDB_ID]/S[NUMBER]/E[NUMBER]</td>
-            <td>/tv/v1/1396/S1/E1</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="text-center text-xl pt-10">made with svelte</p>
+    
+    <Accordion>
+      <AccordionItem>
+        <span slot="header">2embed</span>
+        <Table striped={true} color='yellow' hoverable={true} class="rounded">
+          <TableHead>
+            <TableHeadCell>Type</TableHeadCell>
+            <TableHeadCell>query</TableHeadCell>
+            <TableHeadCell>example</TableHeadCell>
+          </TableHead>
+          <TableBody class="divide-y">
+            <TableBodyRow>
+              <TableBodyCell>TV</TableBodyCell>
+              <TableBodyCell>{origin}/2embed/movie/<span class="text-xs text-red-500">[tmdb_id]</span></TableBodyCell>
+              <TableBodyCell>
+                <a href="/2embed/movie/tt0439572" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Click here</a>
+              </TableBodyCell>
+            </TableBodyRow>
+            <TableBodyRow>
+              <TableBodyCell>Movie</TableBodyCell>
+              <TableBodyCell>{origin}/2embed/tv/<span class="text-xs text-red-500">[tmdb_id]</span>/S<span class="text-xs text-red-500">[season_number]</span>/E<span class="text-xs text-red-500">[episode_number]</span></TableBodyCell>
+              <TableBodyCell>
+                <a href="/2embed/tv/1396/S1/E1" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Click here</a>
+              </TableBodyCell>
+            </TableBodyRow>
+          </TableBody>
+        </Table>
+      </AccordionItem>
+    </Accordion>
+
 </div>
