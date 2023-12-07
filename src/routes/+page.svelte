@@ -38,14 +38,14 @@
           <TableBody class="divide-y">
             <TableBodyRow>
               <TableBodyCell>TV</TableBodyCell>
-              <TableBodyCell>{origin}/2embed/movie/<span class="text-xs text-red-500">[tmdb_id]</span></TableBodyCell>
+              <TableBodyCell>{origin}/2embed/movie/<span class="text-xs text-red-500">[imdb_id]</span></TableBodyCell>
               <TableBodyCell>
                 <a href="/2embed/movie/tt0439572" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Click here</a>
               </TableBodyCell>
             </TableBodyRow>
             <TableBodyRow>
               <TableBodyCell>Movie</TableBodyCell>
-              <TableBodyCell>{origin}/2embed/tv/<span class="text-xs text-red-500">[tmdb_id]</span>/S<span class="text-xs text-red-500">[number]</span>/E<span class="text-xs text-red-500">[number]</span></TableBodyCell>
+              <TableBodyCell>{origin}/2embed/tv/<span class="text-xs text-red-500">[imdb_id]</span>/S<span class="text-xs text-red-500">[number]</span>/E<span class="text-xs text-red-500">[number]</span></TableBodyCell>
               <TableBodyCell>
                 <a href="/2embed/tv/1396/S1/E1" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Click here</a>
               </TableBodyCell>
