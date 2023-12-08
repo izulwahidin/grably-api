@@ -1,22 +1,19 @@
 import { parse2embedTV } from "$lib/2embed";
+import { apiOnError, apiHeaders } from "$lib/_main";
 
 export async function GET({params}){
-    const data = await parse2embedTV(params.id, params.season, params.episode)
-
-    try {
-        const headers = {
-            'Cache-Control': 'max-age=6000, s-maxage=6000',
-            'Content-Type': 'application/json',
-        };
     
+    try {
+        const data = await parse2embedTV(params.id, params.season, params.episode)
+        
         return new Response(data, {
-            headers
+            headers: apiHeaders
         })
 
     } catch (error) {
-        return {
-            status: 500,
-            body: 'Internal Server Error',
-        };
+        return new Response(apiOnError(error),{
+            headers: apiHeaders,
+            status: 500
+        });
     }
 }
