@@ -24,4 +24,5 @@ export function apiOnError(str){
 export const apiHeaders = {
         'Cache-Control': 'max-age=6000, s-maxage=6000',
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
 }
