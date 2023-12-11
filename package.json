@@ -20,6 +20,7 @@
 	"type": "module",
 	"dependencies": {
 		"@popperjs/core": "^2.11.8",
+		"cheerio": "^1.0.0-rc.12",
 		"flowbite": "^2.2.0",
 		"flowbite-svelte": "^0.44.20",
 		"tailwind-merge": "^2.1.0"

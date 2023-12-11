@@ -1,10 +1,10 @@
-import { parse2embedMovie } from "$lib/2embed";
-import { apiOnError, apiHeaders } from "$lib/_main";
+import { homepage } from "$lib/manwha18.net"
+import { apiHeaders, apiOnError } from "$lib/_main";
 
-export async function GET({params}){
+export async function GET(){
 
     try {
-        const data = await parse2embedMovie(params.id)
+        const data = await homepage()
     
         return new Response(data, {
             headers: apiHeaders
